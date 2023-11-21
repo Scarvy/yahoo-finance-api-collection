@@ -1,0 +1,29 @@
+meta {
+  name: crumb
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://query2.finance.yahoo.com/v1/test/getcrumb
+  body: none
+  auth: none
+}
+
+headers {
+  upgrade-insecure-requests: 1
+  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36
+  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+  sec-ch-ua: Google Chrome;v="85", "Chromium";v="85", ";Not A Brand";v="99"'
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: Windows
+  sec-fetch-site: none
+  sec-fetch-site: accept-encoding
+  Accept-Language: en-US,de;q=0.7
+  sec-fetch-user: ?1
+  Accept-Encoding: gzip
+}
+
+script:post-response {
+  url = req.getUrl();
+}

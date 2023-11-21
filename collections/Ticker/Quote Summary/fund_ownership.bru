@@ -1,0 +1,20 @@
+meta {
+  name: fund_ownership
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{symbol}}?modules=fundOwnership&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: fundOwnership
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: news_v1
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/v1/finance/search?q={{symbol}}
+  body: none
+  auth: none
+}
+
+query {
+  q: {{symbol}}
+}

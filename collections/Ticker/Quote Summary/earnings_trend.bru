@@ -1,0 +1,20 @@
+meta {
+  name: earnings_trend
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{symbol}}?modules=earningsTrend&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: earningsTrend
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

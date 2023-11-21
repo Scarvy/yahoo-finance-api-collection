@@ -1,0 +1,20 @@
+meta {
+  name: sec_filings
+  type: http
+  seq: 25
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{symbol}}?modules=secFilings&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: secFilings
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

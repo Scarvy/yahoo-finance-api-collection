@@ -1,0 +1,20 @@
+meta {
+  name: calendar_events
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{symbol}}?modules=calendarEvents&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: calendarEvents
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

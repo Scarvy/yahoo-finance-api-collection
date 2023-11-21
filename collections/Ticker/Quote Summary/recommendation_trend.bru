@@ -1,0 +1,20 @@
+meta {
+  name: recommendation_trend
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{symbol}}?modules=recommendationTrend&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: recommendationTrend
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

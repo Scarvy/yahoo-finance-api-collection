@@ -1,0 +1,27 @@
+meta {
+  name: chart
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/v8/finance/chart/{{symbol}}?interval=1d&period1=-883612800&period2=1700307883&events=div,split&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  interval: 1d
+  period1: -883612800
+  period2: 1700307883
+  events: div,split
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
+
+vars:post-response {
+  metadata: res("chart.result.meta")
+}

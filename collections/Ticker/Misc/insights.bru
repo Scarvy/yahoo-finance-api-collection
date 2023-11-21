@@ -1,0 +1,15 @@
+meta {
+  name: insights
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{BASE_URL}}/ws/insights/v2/finance/insights?symbol={{symbol}}
+  body: none
+  auth: none
+}
+
+query {
+  symbol: {{symbol}}
+}

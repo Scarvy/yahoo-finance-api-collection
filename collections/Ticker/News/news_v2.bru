@@ -1,0 +1,22 @@
+meta {
+  name: news_v2
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/v2/finance/news?formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}&start=None&count=25&symbols={{symbol}}
+  body: none
+  auth: none
+}
+
+query {
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  start: None
+  count: 25
+  symbols: {{symbol}}
+}

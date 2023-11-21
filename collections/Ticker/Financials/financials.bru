@@ -1,0 +1,23 @@
+meta {
+  name: financials
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/ws/fundamentals-timeseries/v1/finance/timeseries/{{symbol}}?lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}&period1=493590046&period2=1700519274&type=annualNetIncomeContinuousOperations&merge=false&padTimeSeries=false
+  body: none
+  auth: none
+}
+
+query {
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  period1: 493590046
+  period2: 1700519274
+  type: annualNetIncomeContinuousOperations
+  merge: false
+  padTimeSeries: false
+}

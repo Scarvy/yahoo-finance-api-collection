@@ -1,0 +1,11 @@
+meta {
+  name: recommendations
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{BASE_URL}}/v6/finance/recommendationsbysymbol/{{symbol}}
+  body: none
+  auth: none
+}

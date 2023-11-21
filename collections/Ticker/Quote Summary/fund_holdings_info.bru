@@ -1,0 +1,20 @@
+meta {
+  name: fund_holdings_info
+  type: http
+  seq: 26
+}
+
+get {
+  url: {{BASE_URL}}/v10/finance/quoteSummary/{{ETF}}?modules=topHoldings&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  modules: topHoldings
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}

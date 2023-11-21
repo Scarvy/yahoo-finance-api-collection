@@ -1,0 +1,22 @@
+meta {
+  name: chart_date_range
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/v8/finance/chart/{{symbol}}?interval=1d&events=div,split&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}&range=ytd
+  body: none
+  auth: none
+}
+
+query {
+  interval: 1d
+  events: div,split
+  formatted: false
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+  range: ytd
+}

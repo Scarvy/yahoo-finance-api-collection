@@ -1,0 +1,11 @@
+meta {
+  name: trending_stocks
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{BASE_URL}}/v1/finance/trending/{{region}}
+  body: none
+  auth: none
+}

@@ -1,0 +1,17 @@
+meta {
+  name: currencies_v1
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/v1/finance/currencies?lang=en-US&region=US&corsDomain=finance.yahoo.com
+  body: none
+  auth: none
+}
+
+query {
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+}

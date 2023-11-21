@@ -1,0 +1,18 @@
+meta {
+  name: options
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{BASE_URL}}/v7/finance/options/{{symbol}}?lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}
+  body: none
+  auth: none
+}
+
+query {
+  lang: en-US
+  region: US
+  corsDomain: finance.yahoo.com
+  crumb: {{crumb}}
+}
