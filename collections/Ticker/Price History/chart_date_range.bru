@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/v8/finance/chart/{{symbol}}?interval=1d&events=div,split&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}&range=ytd
+  url: {{BASE_URL}}/v8/finance/chart/{{symbol}}?interval=1d&events=div,split&formatted=false&lang=en-US&region=US&corsDomain=finance.yahoo.com&crumb={{crumb}}&range=1mo
   body: none
   auth: none
 }
@@ -18,5 +18,5 @@ query {
   region: US
   corsDomain: finance.yahoo.com
   crumb: {{crumb}}
-  range: ytd
+  range: 1mo
 }
